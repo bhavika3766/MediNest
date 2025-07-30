@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "Prodname": "Paracetamol 500mg",
+    "description": "Effective pain reliever and fever reducer.",
+    "price": 25,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "PharmaLife",
+    "stock": 120,
+    "category": "Pain Relief"
+  },
+  {
+    "id": 2,
+    "Prodname": "Ibuprofen 400mg",
+    "description": "Reduces inflammation, pain, and fever.",
+    "price": 30,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "HealWell Labs",
+    "stock": 75,
+    "category": "Pain Relief"
+  },
+  {
+    "id": 3,
+    "Prodname": "Cetirizine 10mg",
+    "description": "Antihistamine for allergy symptoms.",
+    "price": 18,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "AllerCare",
+    "stock": 200,
+    "category": "Allergy"
+  },
+  {
+    "id": 4,
+    "Prodname": "Amoxicillin 250mg",
+    "description": "Antibiotic used to treat bacterial infections.",
+    "price": 45,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "MediTrust",
+    "stock": 50,
+    "category": "Antibiotics"
+  },
+  {
+    "id": 5,
+    "Prodname": "ORS Sachet",
+    "description": "Oral rehydration salts to prevent dehydration.",
+    "price": 10,
+     "image": "https://picsum.photos/200",
+    "manufacturer": "HydraCare",
+    "stock": 300,
+    "category": "Hydration"},
+  
+  {
+    "id": 6,
+    "Prodname": "Paracetamol 500mg",
+    "description": "Effective pain reliever and fever reducer.",
+    "price": 25,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "PharmaLife",
+    "stock": 120,
+    "category": "Pain Relief"
+  },
+  {
+    "id": 7,
+    "Prodname": "Ibuprofen 400mg",
+    "description": "Reduces inflammation, pain, and fever.",
+    "price": 30,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "HealWell Labs",
+    "stock": 75,
+    "category": "Pain Relief"
+  },
+  {
+    "id": 8,
+    "Prodname": "Cetirizine 10mg",
+    "description": "Antihistamine for allergy symptoms.",
+    "price": 18,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "AllerCare",
+    "stock": 200,
+    "category": "Allergy"
+  },
+  {
+    "id": 9,
+    "Prodname": "Amoxicillin 250mg",
+    "description": "Antibiotic used to treat bacterial infections.",
+    "price": 45,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "MediTrust",
+    "stock": 50,
+    "category": "Antibiotics"
+  },
+  {
+    "id": 10,
+    "Prodname": "ORS Sachet",
+    "description": "Oral rehydration salts to prevent dehydration.",
+    "price": 10,
+     "image": "https://picsum.photos/200",
+    "manufacturer": "HydraCare",
+    "stock": 300,
+    "category": "Hydration"},
+  {
+    "id": 11,
+    "Prodname": "Paracetamol 500mg",
+    "description": "Effective pain reliever and fever reducer.",
+    "price": 25,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "PharmaLife",
+    "stock": 120,
+    "category": "Pain Relief"
+  },
+  {
+    "id": 12,
+    "Prodname": "Ibuprofen 400mg",
+    "description": "Reduces inflammation, pain, and fever.",
+    "price": 30,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "HealWell Labs",
+    "stock": 75,
+    "category": "Pain Relief"
+  },
+  {
+    "id": 13,
+    "Prodname": "Cetirizine 10mg",
+    "description": "Antihistamine for allergy symptoms.",
+    "price": 18,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "AllerCare",
+    "stock": 200,
+    "category": "Allergy"
+  },
+  {
+    "id": 14,
+    "Prodname": "Amoxicillin 250mg",
+    "description": "Antibiotic used to treat bacterial infections.",
+    "price": 45,
+    "image": "https://picsum.photos/200",
+    "manufacturer": "MediTrust",
+    "stock": 50,
+    "category": "Antibiotics"
+  },
+  {
+    "id": 15,
+    "Prodname": "ORS Sachet",
+    "description": "Oral rehydration salts to prevent dehydration.",
+    "price": 10,
+     "image": "https://picsum.photos/200",
+    "manufacturer": "HydraCare",
+    "stock": 300,
+    "category": "Hydration"}
+  ]
