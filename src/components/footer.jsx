@@ -3,15 +3,12 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className='flex flex-col-reverse min-h-screen text-lg'>
+    <div className='flex flex-col-reverse min-h-screen text-MD'>
     <footer className="bg-gray-950 py-15 text-white  " >
         <div className='flex grid-auto pl-8 ml-4 mr-4 pr-8 md:gap-52 mb-4 min-w-full '>
           <div>
             <h1 className='font-bold font-sans'>About Us</h1>
-            
-+
           </div>
-
           <div>
             <h1 className='font-bold font-sans mb-3 flex flex-col space-y-4'>Quick Links</h1>
             <ul>

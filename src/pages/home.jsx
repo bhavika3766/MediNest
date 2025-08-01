@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import Hero from '../components/hero';
 const HomePage = () => {
   return (
-        <div className=' bg-gradient-to-b from-emerald-200 to-blue-300 min-h-screen w-full '>
+        <div className=' bg-gradient-to-b from-emerald-100 to-blue-200 min-h-screen w-full '>
             {/*Navigation*/}
             <Navbar/>
             {/* Hero section*/}
