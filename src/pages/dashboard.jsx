@@ -11,8 +11,19 @@ import { useCart } from '../context/cartContext';
 const Dashboard = () => {
      const[apiData,setApiData]=useState([]);
      const {handleAddToCart}=useCart();
+     const[searchTerm,setSearchTerm]=useState("");
    let baseUrl='https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/cart';
-  
+    const filtered=()=>{apiData.filter(itemFound=>itemFound.Prodname.toLowerCase().includes(searchTerm.toLowerCase()));
+      if(itemFound==true){
+        return filtered;
+      }
+      else{
+        return "item not found!"
+      }
+    }
+    
+
+    
   useEffect(()=>{
     axios.get(baseUrl).then(response=>{
       console.log('apiData:', response.data); 
@@ -27,9 +38,9 @@ const Dashboard = () => {
       <div>  
       <ToastContainer position="bottom-right" />
       <ProductList apiData={apiData} onAddToCart={handleAddToCart}/>
-    
+    <Footer/>
       </div>
-      <Footer/>
+      
       </div>
   );
 
