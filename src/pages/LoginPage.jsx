@@ -94,7 +94,6 @@ useEffect(()=>{
       <div className='bg-blue-200 flex-col m-4 items-center justify-center backdrop-blur-MD text-center text-black absolute  backdrop-blur-sm shadow-md p-4 mt-8 min-w-lg shadow-3xl h-2/3 rounded-2xl'>
       <form onSubmit={handleSubmit} className=' mb-4 space-x-10 flex-col items-center justify-center' >
         <h1 className='font-sans italic relative text-4xl font-bold pl-5 ml-10  bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
-
         <div>
         <label className="my-2 mx-2 mt-2 font-bold text-xl">Username:</label>
         <input

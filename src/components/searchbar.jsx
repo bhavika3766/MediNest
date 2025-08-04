@@ -17,7 +17,7 @@ const Searchbar = ({onSearch}) => {
             placeholder="What are you looking for today?"
             />
             <button
-            className=' mask-alpha bg-gray-950 cursor-pointer px-4 hover:shadow-xl py-2 rounded-xl text-white' 
+            className=' mask-alpha bg-gray-950 cursor-pointer px-4 border-box hover:shadow-xl py-2 rounded-xl text-white' 
             type='submit'
             >Search</button>
         </form>
