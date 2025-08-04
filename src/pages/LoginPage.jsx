@@ -90,8 +90,8 @@ useEffect(()=>{
      setUserError(validationUserError);
     },[userName]);
   return (
-    <div className='font-serif bg-gradient-to-b from-emerald-100 to-blue-200 min-w-screen min-h-screen text-center p-8 '>
-      <div className='bg-blue-200  items-center justify-center backdrop-blur-MD text-center text-black absolute  backdrop-blur-sm shadow-md p-4 mt-8 min-w-lg shadow-3xl h-2/3 rounded-2xl'>
+    <div className='font-serif bg-gradient-to-b from-emerald-200 to-blue-200 min-w-screen min-h-screen text-center p-8 '>
+      <div className='bg-blue-200 flex-col m-4 items-center justify-center backdrop-blur-MD text-center text-black absolute  backdrop-blur-sm shadow-md p-4 mt-8 min-w-lg shadow-3xl h-2/3 rounded-2xl'>
       <form onSubmit={handleSubmit} className=' mb-4 space-x-10 flex-col items-center justify-center' >
         <h1 className='font-sans italic relative text-4xl font-bold pl-5 ml-10  bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
 
@@ -132,7 +132,7 @@ useEffect(()=>{
           autoCorrect="off"/>
         </div>
         <div className='text-center '>
-        <button className='cursor-pointer rounded p-2 bg-blue-200 mt-2 items-center' type="submit">Submit</button>
+        <button className='cursor-pointer rounded p-2 bg-blue-300 mt-2 items-center' type="submit">Submit</button>
         </div>
       </form>
     </div>

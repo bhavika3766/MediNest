@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <div > 
       <div className=" max-w-3xl mx-auto mt-6 rounded-xl mb-5 shadow-2xl drop-shadow-2xl">
-      <Slider {...settings}>
+      <Slider {...settings}>{/*spread operator is here used to pass data to the prop */}
         {images.map((src, index) => (
           <div key={index}>
             <img src={src} alt={`Slide ${index}`} className="w-full h-2/4 object-cover shadow-2xl  rounded-xl" />
