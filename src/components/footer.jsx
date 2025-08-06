@@ -1,4 +1,6 @@
 import React from 'react';
+import PrivacyPolicy from '../pages/privacyPolicy';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -23,7 +25,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h1 className='font-bold font-sans'>Policy Info</h1>
+            <h1 className='font-bold font-sans'><Link to='/privacy'>Privacy Policy</Link></h1>
           </div>
 
           <div>

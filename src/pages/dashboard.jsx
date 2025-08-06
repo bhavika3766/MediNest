@@ -3,26 +3,16 @@ import axios from "axios";
 import Nav from '../components/nav';
 import ProductList from '../components/productList';
 import Footer from '../components/footer';
-import { toast ,ToastContainer} from 'react-toastify';
-
 import { useCart } from '../context/cartContext';
+import { data } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
  
 
 const Dashboard = () => {
      const[apiData,setApiData]=useState([]);
      const {handleAddToCart}=useCart();
      const[searchTerm,setSearchTerm]=useState("");
-   let baseUrl='https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/cart';
-    const filtered=()=>{apiData.filter(itemFound=>itemFound.Prodname.toLowerCase().includes(searchTerm.toLowerCase()));
-      if(itemFound==true){
-        return filtered;
-      }
-      else{
-        return "item not found!"
-      }
-    }
-    
-
+     const baseUrl="https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/cart"
     
   useEffect(()=>{
     axios.get(baseUrl).then(response=>{
@@ -31,10 +21,16 @@ const Dashboard = () => {
         console.log(error.response.status);
       })
     },[])
+     const handleSearchChange = (searchTerm) => {
+    setSearchTerm(searchTerm);
+     }
+    
+
+    
     
   return (
     <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200  min-h-screen w-full'>
-      <Nav/>
+      <Nav apiData={apiData} handleSearchChange={handleSearchChange}/>
       <div>  
       <ToastContainer position="bottom-right" />
       <ProductList apiData={apiData} onAddToCart={handleAddToCart}/>

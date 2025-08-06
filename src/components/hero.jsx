@@ -27,7 +27,7 @@ const Hero = () => {
       </Slider>
       </div>
       <div className='bg-blend-color'>
-        <h1 className='mt-6 font-serif font-bold text-3xl text-center text-gray-600 '>Simplifying Healthcare Across India</h1>
+        <h1 className='mt-6 font-serif font-bold  text-center text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 '>Simplifying Healthcare Across India</h1>
         <h1 className='mt-6 font-serif font-bold text-xl text-center text-gray-600 '>Affordable, accessible healthcare at your fingertips</h1>
       </div>
        
