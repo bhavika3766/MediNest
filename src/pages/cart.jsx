@@ -5,22 +5,33 @@ import Dashboard from './dashboard';
 import { useCart } from '../context/cartContext';
 const Cart = () => {
       
-      const {cartItems}=useCart();
-      const cartCount=cartItems.length;
+      const {cartItems,DecreaseQuantity,IncreaseQuantity,cartCount}=useCart();
+      
    
   return (
-    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200 min-h-screen w-full'>
+    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200 w-full h-full'>
       
         <Nav/>
         <div>
           <h1 className='font-bold text-left text-5xl font-sans'>CART({cartCount})</h1>
-      <ul className=' p-6 ml-15'>{cartItems.map(item=>(<li className="grid" key={item.id}>
-        <img src={item.image} className="outline-2 outline-gray-700 hover:drop-shadow-2xl shadow-2xl object-cover h-[50px] w-[50px] shadow-gray-500 hover:translate-3d hover:rounded-xl  " />
-       <h3 className='text-xl font-semibold mt-2 '>{item.Prodname}</h3>
-       <h5>Price: Rs.{item.price}</h5>
-       <h5>Quantity:{item.quantity}</h5>
-      </li>)
-      )}</ul>
+          <div className='m-5 p-5 space-x-5'>
+      {cartItems.map(item=>(<div className='flex-1  space-y-4 items-center space-x-6 mb-4' key={item.id}>
+        <div>
+           <img src={item.image} className="w-16 h-16 object-cover rounded flex " />
+        
+       +
+      <div>
+      <h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
+       <h5>Price: Rs.{item.price}</h5>       
+       
+       <h5>Quantity: <button className="cursor-pointer bg-white text-black outline-2 object-contain h-[20px] w-[15px]" onClick={DecreaseQuantity}><h1 className='font-extrabold'>-</h1></button> <span>{item.quantity}&nbsp;</span>
+       <button className="cursor-pointer bg-white outline-2 text-black object-contain h-[20px] w-[15px]" onClick={IncreaseQuantity}><h1 className='font-extrabold'> + </h1></button> 
+       </h5>
+       </div>
+       </div>
+    </div>
+      ))}
+      </div>
         </div>
         </div>
   )

@@ -6,6 +6,7 @@ import Dashboard from '../pages/dashboard';
 import Cart from '../pages/cart';
 import {CartProvider} from '../context/cartContext';
 import PrivacyPolicy from '../pages/privacyPolicy';
+import SignUp from '../pages/SignUp';
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/privacy" element={<PrivacyPolicy/>}/>
+          <Route path="/signUp" element={<SignUp/>}/>
         </Routes>
     </CartProvider>
         

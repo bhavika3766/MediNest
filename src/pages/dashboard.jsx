@@ -4,7 +4,6 @@ import Nav from '../components/nav';
 import ProductList from '../components/productList';
 import Footer from '../components/footer';
 import { useCart } from '../context/cartContext';
-import { data } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
  
 

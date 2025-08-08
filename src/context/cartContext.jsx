@@ -6,6 +6,7 @@ export const useCart=()=>useContext(cartContext);
  
 export const CartProvider = ({children}) => {
     const[cartItems,setCartItems]=useState([]);
+    const [cartCount,setCartCount]=useState(cartItems.length);
     const cartURL="https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/AddedProducts";
     useEffect(()=>{ 
         axios.get(cartURL).then(responseCart=>{
@@ -23,16 +24,25 @@ export const CartProvider = ({children}) => {
       }
       catch(error){
         toast.error("Unsucessful!",error.message);
-      }
-    };
+      }};
+    const DecreaseQuantity=()=>{
+        if(item.length>0){
+          setCartItems.quantity(cartItems.quantity-1);}
+        else{
+          setCartItems(...cartItems.slice(0,-1));
+          setCartCount(cartCount-1);
+        }
+        };
+    
+    const IncreaseQuantity=()=>{
+      setCartItems.quantity(cartItems.quantity+1);
+    }
+    
   return (
-    
-        <cartContext.Provider value={{cartItems,setCartItems,handleAddToCart}}>
+  
+        <cartContext.Provider value={{cartItems,setCartItems,handleAddToCart,DecreaseQuantity,IncreaseQuantity,cartCount}}>
             {children}
-        
         </cartContext.Provider>
-        
-    
   );
 }
 
