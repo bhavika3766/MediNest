@@ -17,14 +17,16 @@ export const CartProvider = ({children}) => {
         })
 
     },[])
-    const handleAddToCart=async(item)=>{
-      try{
-        const responsePost= await axios.post('https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/AddedProducts',item);
-        toast.info("Item added to cart sucessfully!",responsePost.data)
-      }
-      catch(error){
-        toast.error("Unsucessful!",error.message);
-      }};
+    const handleAddToCart=(item)=>{
+      axios.post("https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/AddedProducts").then(
+        responsePost=>toast.info("Item added to cart sucessfully!",responsePost.data)
+      ).catch(error=>{toast.error("Unsucessful!",error.message);})}
+        //const responsePost= axios.post('',item);
+        //toast.info("Item added to cart sucessfully!",responsePost.data)
+      
+      //catch(error){
+        //toast.error("Unsucessful!",error.message);
+      //}};
     const DecreaseQuantity=()=>{
         if(item.length>0){
           setCartItems.quantity(cartItems.quantity-1);}

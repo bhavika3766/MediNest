@@ -1,10 +1,84 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const SignUp = () => {
+export const SignUp = () => {
+  const[formData,setFormData]=useState({
+     id:"",
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:"",
+    mob_no:"",
+  });
+  const navigate=useNavigate();
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+  }
   return (
     
-    <div>SignUp</div>
-  )
-}
+    <div className='bg-gradient-to-b from-emerald-200 to-blue-200 min-h-screen w-full '>
+      
+  <div>
+  
+      <form onSubmit={handleSubmit} className=' mb-4 space-x-10 ' >
+        <h1 className='font-sans italic text-4xl font-bold pl-5 ml-10  p- p-5 gap-8 bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
+        <div>
+        <label className="my-2  mt-2 font-bold text-xl">First Name:</label>
+        <input
+          type=""
+          name="firstName"
+          className='outline-2 outline-neutral-950 mx-4  font-bold rounded my-2 mt-2'
+          required>
+        </input><br/>
+        </div>
+         <div>
+        <label className="my-2  mt-2 font-bold text-xl">Last Name:</label>
+        <input
+          type=""
+          name="lastName"
+          className='outline-2 outline-neutral-950 mx-4  font-bold rounded my-2 mt-2'
+          required>
+        </input><br/>
+        </div>
+        <div>
+        <label className="my-2  mt-2 font-bold text-xl">Email:</label>
+        <input
+          type="email"
+          name="email"
+          minLength={4}
+          maxLength={20}
+          className='outline-2 outline-neutral-950 mx-4  font-bold rounded my-2 mt-2'
+          required>
+        </input><br/>
+        </div>
 
+        <div>
+        <label className='my-2  font-bold text-xl'>Password:</label>
+        <input
+          type="password"
+          name="password"
+          
+          required
+          className='outline-2 outline-neutral-950 mx-4 font-bold rounded mb-4 mt-2'>
+        </input><br/>
+        </div>
+        <div>
+        <label className="my-2  mt-2 font-bold text-xl">Phone Number:</label>
+        <input
+          type="number"
+          name="mob_no"
+          minLength={10}
+          maxLength={10}
+          className='outline-2 outline-neutral-950 mx-4  font-bold rounded my-2 mt-2'
+          required>
+        </input><br/>
+        </div>
+        <div className='text-center '>
+        <button className='cursor-pointer rounded p-2 bg-blue-300 mt-2 items-center' onClick={()=>navigate('/dashboard')} type="submit">Submit</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  );
+}
 export default SignUp

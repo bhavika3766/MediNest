@@ -2,114 +2,118 @@ import React from 'react';
 
 export const PrivacyPolicy = () => {
   return (
-    <div className=' bg-gradient-to-b from-emerald-200 to-blue-200 min-h-screen w-full '>
-<h1>Privacy Policy</h1>
-<h5>Effective Date: August 5, 2025</h5>
-<h5>Last Updated: August 5, 2025</h5>
+    <div className=' bg-gradient-to-b from-emerald-200 to-blue-200 min-h-screen max-w-full min-w-screen   '>
+      <div className='mx-2 space-y-4 overflow-auto'>
 
-<h6>At MediNest, your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our website, mobile app, or services related to online medicine ordering, consultations, and health-related offerings.</h6>
+        <h1 className='text-center text-2xl font-bold mb-6 pt-3'>Privacy Policy</h1>
+        <h5 className='text-left text-md font-semibold mb-4'>Effective Date: August 5, 2025<br />
+          Last Updated: August 5, 2025</h5>
 
-<h3>1. Information We Collect</h3>
+        <h6 >At MediNest, your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our website, mobile app, or services related to online medicine ordering, consultations, and health-related offerings.</h6>
 
-<p>We may collect the following types of personal data:
+        <h3 className='text-left text-md font-semibold'>1. Information We Collect</h3>
 
-Personal Information: Full name, email address, mobile number, delivery address, date of birth/age.
+        <p>We may collect the following types of personal data:
 
-Medical Information: Uploaded prescriptions, medical history (if provided), consultation chat or call records.
+          Personal Information: Full name, email address, mobile number, delivery address, date of birth/age.
 
-Transaction & Technical Information: Payment details (processed via third-party providers), IP address, device/browser info, location data (if you allow it).   
-</p>
+          Medical Information: Uploaded prescriptions, medical history (if provided), consultation chat or call records.
 
-<h3>2. How We Use Your Information</h3>
-<p>We use your information to:
+          Transaction & Technical Information: Payment details (processed via third-party providers), IP address, device/browser info, location data (if you allow it).
+        </p>
 
-Process and deliver your medicine orders
+        <h3 className='text-left text-md font-semibold'>2. How We Use Your Information</h3>
 
-Verify prescriptions as required by law
+        <p>We use your information to:
 
-Offer personalized health recommendations
+          Process and deliver your medicine orders
 
-Provide customer support
+          Verify prescriptions as required by law
 
-Conduct consultations with licensed professionals
+          Offer personalized health recommendations
 
-Improve our website and services
+          Provide customer support
 
-Send transactional messages (order updates, reminders)</p>
+          Conduct consultations with licensed professionals
 
-<h3>3. Prescription and Health Data</h3>
-<p>Your prescription and health data are handled securely and only:
+          Improve our website and services
 
-Viewed by licensed pharmacists and doctors
+          Send transactional messages (order updates, reminders)</p>
 
-Stored with strict access controls
+        <h3 className='text-left text-md font-semibold'>3. Prescription and Health Data</h3>
+        <p>Your prescription and health data are handled securely and only:
 
-Shared only when legally required or with your consent
+          Viewed by licensed pharmacists and doctors
 
-We never sell or rent your health data.</p>
+          Stored with strict access controls
 
-<h3>4. Sharing of Information</h3>
-<p>We may share your information with:
+          Shared only when legally required or with your consent
 
-Licensed pharmacists or healthcare professionals
+          We never sell or rent your health data.</p>
 
-Delivery and logistics providers
+        <h3 className='text-left text-md font-semibold'>4. Sharing of Information</h3>
+        <p>We may share your information with:
 
-Payment gateways (e.g., Razorpay, Stripe)
+          Licensed pharmacists or healthcare professionals
 
-Government or regulatory bodies when required
+          Delivery and logistics providers
 
-We do not share your personal data with advertisers or third parties for profit.</p>
+          Payment gateways (e.g., Razorpay, Stripe)
 
-<h3>5. Cookies and Tracking</h3>
-<p>We use cookies to:
+          Government or regulatory bodies when required
 
-Keep you logged in
+          We do not share your personal data with advertisers or third parties for profit.</p>
 
-Remember your preferences
+        <h3 className='text-left text-md font-semibold'>5. Cookies and Tracking</h3>
+        <p>We use cookies to:
 
-Analyze site performance (via tools like Google Analytics)
+          Keep you logged in
 
-You can disable cookies in your browser, though some features may stop working.</p>
+          Remember your preferences
 
-<h3>6. Data Security</h3>
-<p>We follow industry-standard security practices:
+          Analyze site performance (via tools like Google Analytics)
 
-SSL encryption for all data transfer
+          You can disable cookies in your browser, though some features may stop working.</p>
 
-Access controls for prescription and personal data
+        <h3 className='text-left text-md font-semibold'>6. Data Security</h3>
+        <p>We follow industry-standard security practices:
 
-Secure servers with limited access
+          SSL encryption for all data transfer
 
-However, no method is 100% secure. Use our services at your own discretion.</p>
+          Access controls for prescription and personal data
 
-<h3>7. Your Rights</h3>
-<p>Depending on your location, you may have the right to:
+          Secure servers with limited access
 
-Access your data
+          However, no method is 100% secure. Use our services at your own discretion.</p>
 
-Request deletion or correction
+        <h3 className='text-left text-md font-semibold'>7. Your Rights</h3>
+        <p>Depending on your location, you may have the right to:
 
-Withdraw consent
+          Access your data
 
-Lodge a complaint with a data protection authority
+          Request deletion or correction
 
-To exercise these rights, email us at privacy@medinest.com.</p>
+          Withdraw consent
 
-<h3>8. Children’s Privacy</h3>
-<p>Our services are not intended for children under 18. We do not knowingly collect data from minors without guardian consent.</p>
+          Lodge a complaint with a data protection authority
 
-<h3>9. Changes to This Policy</h3>
-<p>We may update this policy from time to time. When we do, we’ll revise the "Last Updated" date. Significant changes will be notified via email or on our website.</p>
+          To exercise these rights, email us at privacy@medinest.com.</p>
 
-<h3>10. Contact Us</h3>
-<p>If you have questions or concerns about this policy, please contact:
+        <h3 className='text-left text-md font-semibold'>8. Children’s Privacy</h3>
+        <p>Our services are not intended for children under 18. We do not knowingly collect data from minors without guardian consent.</p>
 
-MediNest Pvt. Ltd.
-Email: privacy@medinest.com
-Phone: +91-90000-00000
-Registered Address: 123 HealthTech Street, Bengaluru, India</p>
+        <h3 className='text-left text-md font-semibold'>9. Changes to This Policy</h3>
+        <p>We may update this policy from time to time. When we do, we’ll revise the "Last Updated" date. Significant changes will be notified via email or on our website.</p>
 
+        <h3 className='text-left text-md font-semibold'>10. Contact Us</h3>
+        <p className='pb-4'>If you have questions or concerns about this policy, please contact:
+
+          MediNest Pvt. Ltd.
+          Email: privacy@medinest.com
+          Phone: +91-90000-00000
+          Registered Address: 123 HealthTech Street, Bengaluru, India
+        </p>
+      </div>
     </div>
   )
 }

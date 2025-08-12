@@ -1,9 +1,40 @@
-import React from 'react'
-
-const wishlist = () => {
+import React,{useState,useEffect}from 'react';
+import Nav from '../components/nav';
+import ProductList from '../components/productList';
+import Dashboard from './dashboard';
+import { useWishList } from '../context/wishlistContext';
+const WishList = () => {
+      
+      const {WishItems,DecreaseQuantity,IncreaseQuantity,wishCount}=useWishList();
+      
+   
   return (
-    <div>wishlist</div>
+    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200 w-full h-full'>
+      
+        <Nav/>
+        <div>
+          <h1 className='font-bold text-left text-5xl font-sans'>WishList({wishCount})</h1>
+          <div className='m-5 p-5 space-x-5'>
+      {WishItems.map(item=>(<div className='flex-1  space-y-4 items-center space-x-6 mb-4' key={item.id}>
+        <div>
+           <img src={item.image} className="w-16 h-16 object-cover rounded flex " />
+        
+       
+      <div>
+      <h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
+       <h5>Price: Rs.{item.price}</h5>       
+       
+       <h5>Quantity: <button className="cursor-pointer bg-white text-black outline-2 object-contain h-[20px] w-[15px]" onClick={DecreaseQuantity}><h1 className='font-extrabold'>-</h1></button> <span>{item.quantity}&nbsp;</span>
+       <button className="cursor-pointer bg-white outline-2 text-black object-contain h-[20px] w-[15px]" onClick={IncreaseQuantity}><h1 className='font-extrabold'> + </h1></button> 
+       </h5>
+       </div>
+       </div>
+    </div>
+      ))}
+      </div>
+        </div>
+        </div>
   )
 }
 
-export default wishlist
+export default WishList;

@@ -19,7 +19,7 @@ const Cart = () => {
         <div>
            <img src={item.image} className="w-16 h-16 object-cover rounded flex " />
         
-       +
+       
       <div>
       <h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
        <h5>Price: Rs.{item.price}</h5>       

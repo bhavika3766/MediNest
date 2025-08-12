@@ -2,26 +2,38 @@ import React, { useEffect,useRef, useState } from 'react'
 import {loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha} from 'react-simple-captcha';
 import {useNavigate} from 'react-router-dom';
 
+
+
+
 const LoginPage = () => {
+  console.log("login");
+  
+  const navigate=useNavigate();
   const[password,setPassword]=useState("");
   const[userName,setUserName]=useState("");
   const[passError,setPassError]=useState(null);
   const[userError,setUserError]=useState(null);
-  const navigate=useNavigate();
   const myRef=useRef(null);
   
+  
+  
   useEffect(()=>{
-    loadCaptchaEnginge(6,"black","white");
+    loadCaptchaEnginge(6,"blue","yellow");
+    
   },[]);
+  
 
 const handleSubmit=(e)=>{
     e.preventDefault();
-    const captchaValue=myRef.current.value;
     
+    const captchaValue=myRef.current.value;
   const isCaptchaValid = validateCaptcha(captchaValue);
-  const isPasswordValid = validatePassword(password);
+    const isPasswordValid = validatePassword(password);
   const isUserNameValid = validateUser(userName);
-  if((captchaInput!=null) &&(!isCaptchaValid) ){
+    
+  
+  
+  if((!captchaValue || !isCaptchaValid) ){
     alert("Captcha did not match. Try Again!");
     return;
   }
@@ -35,8 +47,10 @@ const handleSubmit=(e)=>{
     return;
   }
   navigate('/dashboard');
-};
 
+}
+
+  
 const handleChange=(e)=>{
       const{name,value}=e.target;
       if(name==='username'){
@@ -84,17 +98,21 @@ const validateUser=(userName)=>{
     }
     if(hasInvalidUsername){
       alert("Username cannot have any special characters other than underscore or dot");
-      return;
+    
     }
     return true;
 }
+
+
+
 useEffect(()=>{
      const validationUserError=validateUser(userName);
      setUserError(validationUserError);
     },[userName]);
     
   return (
-    <div className=' bg-gradient-to-b  from-emerald-200 gap-x-2  animated-gradient to-blue-200 fixed inset-0 bg-black bg-opacity-50% flex items-center justify-center'>
+    
+      <div className='  fixed inset-0 flex items-center justify-center'>
       <div className='bg-amber-50 flex-col m-4 backdrop-blur-md text-center  text-black shadow-md p-4 mt-8 w-full max-w-lg shadow-3xl h-2/3 rounded-2xl'>
       <form onSubmit={handleSubmit} className=' mb-4 space-x-10 ' >
         <h1 className='font-sans italic text-4xl font-bold pl-5 ml-10  p- p-5 gap-8 bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
@@ -128,19 +146,23 @@ useEffect(()=>{
         )}
         <div className=' text-center ml-5 flex flex-col  justify-center space-y-1 items-center'>
           <LoadCanvasTemplate /></div>
-          <input id='captchaInput' className='outline-1 font-mono ml-3 mr-2 mt-3 rounded ' 
+          <input className='outline-1 font-mono ml-3 mr-2 mt-3 rounded ' 
           type="text"
           autoComplete="off"
           spellCheck={false}
           autoCorrect="off"
-          ref={myRef}/>
+          ref={myRef}
+          
+          />
         
         <div className='text-center '>
         <button className='cursor-pointer rounded p-2 bg-blue-300 mt-2 items-center' type="submit">Submit</button>
         </div>
       </form>
     </div>
-</div>
+    </div>
+
+
   );
 
 }

@@ -5,10 +5,11 @@ import ProductList from '../components/productList';
 import Footer from '../components/footer';
 import { useCart } from '../context/cartContext';
 import { ToastContainer } from 'react-toastify';
- 
-
+import {useWishList} from '../context/wishlistContext';
 const Dashboard = () => {
      const[apiData,setApiData]=useState([]);
+      
+     const {handleAddToWishList}=useWishList();
      const {handleAddToCart}=useCart();
      const[searchTerm,setSearchTerm]=useState("");
      const baseUrl="https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/cart"
@@ -28,11 +29,13 @@ const Dashboard = () => {
     
     
   return (
-    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200  min-h-screen w-full'>
+    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200  min-h-0 w-full'>
       <Nav apiData={apiData} handleSearchChange={handleSearchChange}/>
       <div>  
       <ToastContainer position="bottom-right" />
-      <ProductList apiData={apiData} onAddToCart={handleAddToCart}/>
+      <ProductList apiData={apiData} onAddToCart={handleAddToCart} onAddToWishList={handleAddToWishList}>
+        
+        </ProductList>
     <Footer/>
       </div>
       
