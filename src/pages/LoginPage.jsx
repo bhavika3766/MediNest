@@ -112,7 +112,7 @@ useEffect(()=>{
     
   return (
     
-      <div className='  fixed inset-0 flex items-center justify-center'>
+      <div className=' bg-gray bg-opacity-10 fixed inset-0 flex items-center justify-center'>
       <div className='bg-amber-50 flex-col m-4 backdrop-blur-md text-center  text-black shadow-md p-4 mt-8 w-full max-w-lg shadow-3xl h-2/3 rounded-2xl'>
       <form onSubmit={handleSubmit} className=' mb-4 space-x-10 ' >
         <h1 className='font-sans italic text-4xl font-bold pl-5 ml-10  p- p-5 gap-8 bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>

@@ -6,10 +6,10 @@ export const useWishList=()=>useContext(wishListContext);
  
 export const WishProvider = ({children}) => {
     const[WishItems,setWishItems]=useState([]);
-    const [WishCount,setWishCount]=useState(WishItems.length);
-    const wishtURL="https://6895c31f039a1a2b28903a3e.mockapi.io/medi/wishList";
+    const [WishCount,setWishCount]=useState(null);
+    const wishURL="https://6895c31f039a1a2b28903a3e.mockapi.io/medi/wishList";
     useEffect(()=>{ 
-        axios.get(wishtURL).then(responseWish=>{
+        axios.get(wishURL).then(responseWish=>{
             setWishItems(responseWish.data);
         }
         ).catch(error=>{
@@ -17,9 +17,12 @@ export const WishProvider = ({children}) => {
         })
 
     },[])
-    const handleAddToWishLists=(item)=>{
+    useEffect(()=>
+          setWishCount(WishItems.length)
+        ,[WishItems])
+    const handleAddToWishList=(item)=>{
       axios.post("https://6895c31f039a1a2b28903a3e.mockapi.io/medi/wishList").then(
-        responsePost=>toast.info("Item added to WishList sucessfully!",responsePost.data)
+        responseWISH=>toast.info("Item added to WishList sucessfully!",responseWISH.data)
       ).catch(error=>{toast.error("Unsucessful!",error.message);})}
         //const responsePost= axios.post('',item);
         //toast.info("Item added to cart sucessfully!",responsePost.data)
@@ -32,7 +35,7 @@ export const WishProvider = ({children}) => {
           setWishItems.quantity(WishItemsItems.quantity-1);}
         else{
           setWishItems(...WishItems.slice(0,-1));
-          setWishCount(WishCount-1);
+          
         }
         };
     
@@ -42,7 +45,7 @@ export const WishProvider = ({children}) => {
     
   return (
   
-        <wishListContext.Provider value={{WishItems,setWishItems,handleAddToWishLists,DecreaseQuantity,IncreaseQuantity,WishCount}}>
+        <wishListContext.Provider value={{WishItems,setWishItems,handleAddToWishList,DecreaseQuantity,IncreaseQuantity,WishCount}}>
             {children}
         </wishListContext.Provider>
   );

@@ -7,6 +7,7 @@ import { useCart } from '../context/cartContext';
 import { ToastContainer } from 'react-toastify';
 import {useWishList} from '../context/wishlistContext';
 const Dashboard = () => {
+  
      const[apiData,setApiData]=useState([]);
       
      const {handleAddToWishList}=useWishList();

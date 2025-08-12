@@ -16,9 +16,9 @@ const AppRoutes = () => {
     <WishProvider>
     <CartProvider>
       <Routes>
-          {/*<Route path="/" element={<HomePage />} />*/}
-          {/*<Route path="/login" element={<LoginPage />} />*/}
-          {/*<Route path="/dashboard" element={<Dashboard />} />*/}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/privacy" element={<PrivacyPolicy/>}/>
           <Route path="/signUp" element={<SignUp/>}/>
