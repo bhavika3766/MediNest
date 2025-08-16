@@ -31,7 +31,7 @@ export const CartProvider = ({children}) => {
       //catch(error){
         //toast.error("Unsucessful!",error.message);
       //}};
-    const DecreaseQuantity=()=>{
+    const DecreaseQuantity=(id)=>{
         if(item.length>0){
           setCartItems.quantity(cartItems.quantity-1);}
         else{

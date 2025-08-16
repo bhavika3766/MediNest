@@ -40,7 +40,7 @@ export const WishProvider = ({children}) => {
         };
     
     const IncreaseQuantity=()=>{
-      setWishItems.quantity(WishItemsItems.quantity+1);
+      setWishItems.quantity(WishItems.quantity+1);
     }
     
   return (

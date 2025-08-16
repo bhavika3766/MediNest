@@ -23,10 +23,10 @@ const Searchbar = ({setSearchTerm,searchTerm,apiData,handleSearchChange}) => {
             type="text"
             
             onChange={(e)=>searchFunction(e.target.value)}
-            className='md:w-lg bg-cyan-50  mr-2 px-4 py-2 rounded-xl hover:outline-2 outline-gray-500'
+            className='md:w-lg bg-cyan-50  mr-2 flex-1 px-4 py-2 rounded-xl hover:outline-2 outline-gray-500'
             placeholder="What are you looking for today?"/>
             <button
-            className=' mask-alpha bg-gray-950 cursor-pointer px-4 border-box hover:shadow-xl py-2 rounded-xl text-white' 
+            className=' bg-gray-950 cursor-pointer px-4 border-box hover:shadow-xl py-2 rounded-xl text-white' 
             type='submit'
             >Search</button>
           

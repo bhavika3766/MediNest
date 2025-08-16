@@ -8,6 +8,7 @@ const ProductList = ({apiData,onAddToCart, onAddToWishList}) => {
     
     const[currentPage,setCurrentPage]=useState(1);
     const items=12;
+    
     const itemsStart= (currentPage-1)*items;
     const itemsEnd=(itemsStart+items);
     const currentItems=apiData.slice(itemsStart,itemsEnd);
@@ -26,7 +27,7 @@ const handleFlip=()=>{
   return (
     <div>
   
-        <ul className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4   items-center justify-start p-6 ml-16'>{currentItems.map(item=>(<li key={item.id}>
+        <ul className='grid grid-cols-1 sm:grid-cols-2 md:gap-3 md:grid-cols-3 lg:grid-cols-4  items-center justify-start p-6 ml-16'>{currentItems.map(item=>(<li key={item.id}>
         <img src={item.image} className="outline-2 outline-gray-700 hover:drop-shadow-lg object-cover h-[225px] w-[225px] shadow-gray-500 hover:scale-105 rounded-xl hover:rounded-2xl  " />
        <h3 className='text-xl font-semibold mt-2 '>{item.Prodname}</h3>
        <h5>Price: Rs.{item.price}</h5>

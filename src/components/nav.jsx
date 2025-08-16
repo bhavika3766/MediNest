@@ -11,7 +11,7 @@ const Nav = ({setSearchTerm,searchTerm,apiData,handleSearchChange}) => {
 
   return (
     
-        <nav className=' bg-transparent container flex items-center justify-between  sticky min-w-full h-[75px]'>
+        <nav className=' bg-transparent min-w-full container md:flex-wrap sm: flex-wrap flex items-center mask-b-from-805% justify-between mb-8 sticky w h-[75px]'>
                 <h1 className='font-mono text-5xl font-bold italic  text-left p-4  mask-b-from-75% backdrop-blur-3xl bg-gradient-to-b from-emerald-500 to-purple-600 text-transparent bg-clip-text' ><Link to='/'>MediNest</Link></h1>
                 <Searchbar apiData={apiData} handleSearchChange={handleSearchChange} />
                 <div className="flex items-center space-x-4">
