@@ -15,7 +15,7 @@ export const CartProvider = ({children}) => {
         ).catch(error=>{
             console.log(error.responseCart.status);
         })
-
+                                                                                               
     },[])
     useEffect(()=>
       setCartCount(cartItems.length)

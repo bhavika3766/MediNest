@@ -6,7 +6,7 @@ import LoginPage from '../pages/LoginPage';
 import SignUp from '../pages/SignUp';
 
 export const Navbar = ({openModal}) => {
-   const navigate=useNavigate();
+  
    console.log("navbar rendered");
    
   return (
