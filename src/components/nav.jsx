@@ -8,17 +8,21 @@ import Dashboard from '../pages/dashboard';
 import user_profile from '../assets/user_profile.svg'
 const Nav = ({setSearchTerm,handleSearchChange,filtered}) => {
   const navigate=useNavigate();
-  const results=filtered.map(item=>(<li key={item.id}>
+  const[showResults,setShowResults]=useState(false);
+  //const handleResults=(showResults)=>{
 
-<h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
+  //}
+  //const results=filtered.map(item=>(<li key={item.id}>
+  
+//<h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
 
-                 </li>))
+                // </li>))
 
   return (
     
         <nav className=' bg-transparent min-w-full container md:flex-wrap sm: flex-wrap flex items-center mask-b-from-805% justify-between mb-8 sticky w h-[75px]'>
                 <h1 className='font-mono text-5xl font-bold italic  text-left p-4  mask-b-from-75% backdrop-blur-3xl bg-gradient-to-b from-emerald-500 to-purple-600 text-transparent bg-clip-text' ><Link to='/'>MediNest</Link></h1>
-                <Searchbar setSearchTerm={setSearchTerm} handleSearchChange={handleSearchChange} results={results}>
+                <Searchbar setSearchTerm={setSearchTerm} handleSearchChange={handleSearchChange} >
                                   
                 </Searchbar>
                 <div className="flex items-center space-x-4">

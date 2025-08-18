@@ -32,18 +32,23 @@ export const CartProvider = ({children}) => {
         //toast.error("Unsucessful!",error.message);
       //}};
     const DecreaseQuantity=(id)=>{
-        if(item.length>0){
-          setCartItems.quantity(cartItems.quantity-1);}
-        else{
-          setCartItems(...cartItems.slice(0,-1));
-          setCartCount(cartCount-1);
-        }
+        setCartItems(prev =>
+    prev
+      .map(product =>
+        product.id === id
+          ? { ...product, quantity: product.quantity - 1 }
+          : product
+      )
+      .filter(product => product.quantity > 0) // remove if 0
+  );
         };
     
     const IncreaseQuantity=()=>{
-      setCartItems.quantity(cartItems.quantity+1);
+      setCartItems(cartItems.map(item =>
+      item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+    ));
     }
-    
+
   return (
   
         <cartContext.Provider value={{cartItems,setCartItems,handleAddToCart,DecreaseQuantity,IncreaseQuantity,cartCount}}>

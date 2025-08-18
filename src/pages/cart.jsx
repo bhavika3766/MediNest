@@ -25,7 +25,7 @@ const Cart = () => {
        <h5>Price: Rs.{item.price}</h5>       
        
        <h5>Quantity: <button className="cursor-pointer bg-white text-black outline-2 object-contain h-[20px] w-[15px]" onClick={DecreaseQuantity}><h1 className='font-extrabold'>-</h1></button> <span>{item.quantity}&nbsp;</span>
-       <button className="cursor-pointer bg-white outline-2 text-black object-contain h-[20px] w-[15px]" onClick={IncreaseQuantity}><h1 className='font-extrabold'> + </h1></button> 
+       <button className="cursor-pointer bg-white outline-2 text-black object-contain h-[20px] w-[15px]" onClick={()=>IncreaseQuantity(item.id)}><h1 className='font-extrabold'> + </h1></button> 
        </h5>
        </div>
        </div>

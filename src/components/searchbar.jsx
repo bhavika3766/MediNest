@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 
 const Searchbar = ({setSearchTerm,handleSearchChange,results}) => {
  
-   const[showResults,setShowResults]=useState(false);
+   
   const handleSubmit=(Event)=>{
   
         Event.preventDefault();
