@@ -3,7 +3,7 @@ import Dashboard from '../pages/dashboard';
 import wishlist from '../assets/wishlist.svg';
 
 const ProductList = ({apiData,onAddToCart, onAddToWishList}) => {
-  
+  const[current,setCurrent]=useState(false);
   const[isFlipped,setIsFlipped]=useState(true);
     
     const[currentPage,setCurrentPage]=useState(1);
@@ -42,10 +42,10 @@ const handleFlip=()=>{
              </button>
              </div>}
        {!isFlipped&&(<div>
-        <button onClick={handleFlip} className='bg-white pb-2 pt-2 pl-4 pr-4 m-0'>
-            <h2>{item.Prodname}</h2>
-            <p>{item.description}</p>
-            <p>{item.category}</p>
+        <button onClick={handleFlip} className='bg-white pb-4 pt-4 pl-4 pr-4 m-4 h-[225px] w-[225px]'>
+            <h2 className="font-bold pb-4">{item.Prodname}</h2>
+            <p className='pb-2'>{item.description}</p>
+            <p className='font-semibold'>{item.category}</p>
             </button>
             </div>
             

@@ -30,22 +30,11 @@ export const WishProvider = ({children}) => {
       //catch(error){
         //toast.error("Unsucessful!",error.message);
       //}};
-    const DecreaseQuantity=()=>{
-        if(item.length>0){
-          setWishItems.quantity(WishItemsItems.quantity-1);}
-        else{
-          setWishItems(...WishItems.slice(0,-1));
-          
-        }
-        };
     
-    const IncreaseQuantity=()=>{
-      setWishItems.quantity(WishItems.quantity+1);
-    }
     
   return (
   
-        <wishListContext.Provider value={{WishItems,setWishItems,handleAddToWishList,DecreaseQuantity,IncreaseQuantity,WishCount}}>
+        <wishListContext.Provider value={{WishItems,setWishItems,handleAddToWishList,WishCount}}>
             {children}
         </wishListContext.Provider>
   );

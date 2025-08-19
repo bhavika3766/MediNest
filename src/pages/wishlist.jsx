@@ -5,7 +5,7 @@ import Dashboard from './dashboard';
 import { useWishList } from '../context/wishlistContext';
 const WishList = () => {
       
-      const {WishItems,setWishItems,handleAddToWishList,DecreaseQuantity,IncreaseQuantity,WishCount}=useWishList();
+      const {WishItems,setWishItems,handleAddToWishList,WishCount}=useWishList();
       
    
   return (
@@ -22,10 +22,7 @@ const WishList = () => {
        
       <div>
       <h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
-       <h5>Price: Rs.{item.price}</h5>       
-       
-       <h5>Quantity: <button className="cursor-pointer bg-white text-black outline-2 object-contain h-[20px] w-[15px]" onClick={DecreaseQuantity}><h1 className='font-extrabold'>-</h1></button> <span>{item.quantity}&nbsp;</span>
-       <button className="cursor-pointer bg-white outline-2 text-black object-contain h-[20px] w-[15px]" onClick={IncreaseQuantity}><h1 className='font-extrabold'> + </h1></button> 
+       <h5>Price: Rs.{item.price}
        </h5>
        </div>
        </div>
