@@ -30,7 +30,9 @@ export const WishProvider = ({children}) => {
       //catch(error){
         //toast.error("Unsucessful!",error.message);
       //}};
-    
+      const handleRemoval=()=>{
+        
+      }
     
   return (
   

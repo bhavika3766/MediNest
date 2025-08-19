@@ -21,7 +21,7 @@ export const SignUp = () => {
   <div className='container flex flex-col items-center justify-center bg-amber-50 p-4'>
   
       <form onSubmit={handleSubmit} className='p-5 mb-4 space-x-10 items-center justify-center' >
-        <h1 className='font-sans italic text-4xl text-center font-bold pl-5 ml-10 pb-2 mt-4 p-5 gap-8 bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
+        <h1 className='font-sans italic text-4xl text-center font-bold pl-5 ml-10 mt-4 p-5 gap-8 bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
         <div>
         <label className="my-2  mt-2 font-bold text-xl">First Name:</label><br/>
         <input

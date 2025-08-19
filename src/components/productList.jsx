@@ -28,10 +28,12 @@ const handleFlip=()=>{
     <div className='bg-transparent flex-wrap items-center hover:drop-shadow-lg'>
   
         <ul className='grid grid-cols-1 sm:grid-cols-2 md:gap-3 md:grid-cols-3 lg:grid-cols-4  items-center justify-start p-6 ml-16' hover={()=>{handleFlip}}>{currentItems.map(item=>(<li key={item.id}>
+      
         {isFlipped&&
           <div >
             <button onClick={handleFlip} >
-             <img src={item.image} className="outline-2 outline-gray-700 hover:drop-shadow-lg object-cover h-[225px] w-[225px] shadow-gray-500 hover:scale-105 rounded-xl hover:rounded-2xl  " />
+             <img src={item.image} className="outline-2 outline-gray-700 hover:shadow-2xl hover:drop-shadow-lg object-cover h-[225px] w-[225px] shadow-gray-500 hover:scale-105 rounded-xl hover:rounded-2xl  " />
+              </button>
              <h3 className='text-xl font-semibold mt-2 '>{item.Prodname}</h3>
              <h5>Price: Rs.{item.price}</h5>
              <button onClick={() => onAddToCart(item)} className='hover:font-semibold cursor-pointer '>Add To Cart</button>
@@ -39,10 +41,10 @@ const handleFlip=()=>{
              <button className="hover:font-semibold cursor-pointer mb-4" onClick={()=> onAddToWishList(item)}>
               Add To WishList
              </button>
-             </button>
+            
              </div>}
        {!isFlipped&&(<div>
-        <button onClick={handleFlip} className='bg-white pb-4 pt-4 pl-4 pr-4 m-4 h-[225px] w-[225px]'>
+        <button onClick={handleFlip} className='bg-white hover:shadow-2xl hover:drop-shadow-2xl pb-4 pt-4 rounded-2xl pl-4 pr-4 m-4 h-[225px] w-[225px]'>
             <h2 className="font-bold pb-4">{item.Prodname}</h2>
             <p className='pb-2'>{item.description}</p>
             <p className='font-semibold'>{item.category}</p>

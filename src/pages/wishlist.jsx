@@ -2,6 +2,7 @@ import React,{useState,useEffect}from 'react';
 import Nav from '../components/nav';
 import ProductList from '../components/productList';
 import Dashboard from './dashboard';
+import bin from '../assets/bin.svg';
 import { useWishList } from '../context/wishlistContext';
 const WishList = () => {
       
@@ -22,9 +23,9 @@ const WishList = () => {
        
       <div>
       <h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
-       <h5>Price: Rs.{item.price}
-       </h5>
-       </div>
+       <h5>Price: Rs.{item.price}</h5>
+       <button onClick={handleRemoval}><img src={bin} className='h-[25px] w-[25px] font-light'/></button>
+      </div>
        </div>
     </div>
       ))}
