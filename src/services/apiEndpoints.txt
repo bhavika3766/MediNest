@@ -1,0 +1,4 @@
+cart : https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/AddedProducts
+Products: https://688c929ccd9d22dda5cda5d0.mockapi.io/cart/cart
+User : https://6895c31f039a1a2b28903a3e.mockapi.io/medi/user
+wishlist : https://6895c31f039a1a2b28903a3e.mockapi.io/medi/wishList

@@ -9,7 +9,7 @@ const Cart = () => {
       
    
   return (
-    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200 w-full h-full'>
+    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200 min-w-full h-full'>
       
         <Nav/>
         <div>

@@ -1,6 +1,7 @@
 import React, { useEffect,useRef, useState } from 'react'
 import {loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha} from 'react-simple-captcha';
 import {useNavigate} from 'react-router-dom';
+import SignUp from './SignUp';
 
 
 
@@ -114,10 +115,10 @@ useEffect(()=>{
     
       <div className=' bg-gray bg-opacity-10 fixed inset-0 flex items-center justify-center'>
       <div className='bg-amber-50 flex-col m-4 backdrop-blur-md text-center  text-black shadow-md p-4 mt-8 w-full max-w-lg shadow-3xl h-2/3 rounded-2xl'>
-      <form onSubmit={handleSubmit} className=' mb-4 space-x-10 ' >
-        <h1 className='font-sans italic text-4xl font-bold pl-5 ml-10  p- p-5 gap-8 bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
+      <form onSubmit={handleSubmit} className=' mb-4 space-x-4' >
+        <h1 className='font-sans italic text-4xl font-bold pl-4 ml-6 p-5 gap-8 bg-gradient-to-b from-emerald-400 to-purple-500 text-transparent  bg-clip-text' >MediNest</h1>
         <div>
-        <label className="my-2  mt-2 font-bold text-xl">Username:</label>
+        <label className="my-2  mt-2 font-bold text-xl">Username:</label><br/>
         <input
           type=""
           name="username"
@@ -132,7 +133,7 @@ useEffect(()=>{
         <div className='text-red-600 text-sm ml-4 mt-0.5'>{userError}</div>
         )}
         <div>
-        <label className='my-2  font-bold text-xl'>Password:</label>
+        <label className='my-2  font-bold text-xl'>Password:</label><br/>
         <input
           type="password"
           name="password"
@@ -144,7 +145,7 @@ useEffect(()=>{
         {password && passError && (
         <div className='text-red-600 text-sm ml-4 mt-0.5'>{passError}</div>
         )}
-        <div className=' text-center ml-5 flex flex-col  justify-center space-y-1 items-center'>
+        <div className=' text-center ml-5 flex flex-col  mt-2 justify-center space-y-1 items-center'>
           <LoadCanvasTemplate /></div>
           <input className='outline-1 font-mono ml-3 mr-2 mt-3 rounded ' 
           type="text"
@@ -155,9 +156,12 @@ useEffect(()=>{
           
           />
         
-        <div className='text-center '>
+        <div className='text-center mt-4 mb-4'>
         <button className='cursor-pointer rounded p-2 bg-blue-300 mt-2 items-center' type="submit">Submit</button>
         </div>
+      <p>Don't have an account yet?<div className='cursor-pointer text-blue-800' onClick={()=>navigate('/SignUp')}>Sign Up
+        </div>
+      </p>
       </form>
     </div>
     </div>

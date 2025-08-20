@@ -30,13 +30,15 @@ export const WishProvider = ({children}) => {
       //catch(error){
         //toast.error("Unsucessful!",error.message);
       //}};
-      const handleRemoval=()=>{
-        
+      const handleRemoval=(id)=>{
+        axios.delete(`${wishURL}/${id}`).then(res=>setCartItems(WishItems.filter(i=>i.id!==id))).catch(err=>console.log(err.response?.status))
       }
+        
+      
     
   return (
   
-        <wishListContext.Provider value={{WishItems,setWishItems,handleAddToWishList,WishCount}}>
+        <wishListContext.Provider value={{WishItems,setWishItems,handleAddToWishList,WishCount,handleRemoval}}>
             {children}
         </wishListContext.Provider>
   );

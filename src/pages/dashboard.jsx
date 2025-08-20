@@ -31,7 +31,7 @@ const Dashboard = () => {
     
     
   return (
-    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200  min-h-0 w-full'>
+    <div className='bg-gradient-to-b via-blue-50 from-emerald-200 gap-x-2 to-blue-200  min-h-0 w-full'>
       <Nav setSearchTerm={setSearchTerm} handleSearchChange={handleSearchChange} filtered={filtered}/>
       <div>  
       <ToastContainer position="bottom-right" />

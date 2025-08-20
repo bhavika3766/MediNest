@@ -6,11 +6,11 @@ import bin from '../assets/bin.svg';
 import { useWishList } from '../context/wishlistContext';
 const WishList = () => {
       
-      const {WishItems,setWishItems,handleAddToWishList,WishCount}=useWishList();
+      const {WishItems,setWishItems,handleAddToWishList,handleRemoval,WishCount}=useWishList();
       
    
   return (
-    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200 max-w-full h-full'>
+    <div className='bg-gradient-to-b  from-emerald-200 gap-x-2 to-blue-200 min-w-full h-full'>
       
         <Nav/>
         <div>
@@ -24,7 +24,7 @@ const WishList = () => {
       <div>
       <h3 className='text-lg flex font-semibold mt-2 '>&nbsp;{item.Prodname}</h3>
        <h5>Price: Rs.{item.price}</h5>
-       <button onClick={handleRemoval}><img src={bin} className='h-[25px] w-[25px] font-light'/></button>
+       <button className="cursor-pointer" onClick={()=>handleRemoval(item.id)}><img src={bin} className='h-[25px] w-[25px] font-light'/></button>
       </div>
        </div>
     </div>
