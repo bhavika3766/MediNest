@@ -1,11 +1,11 @@
-import React,{useState,useEffect}from 'react';
+import React from 'react';
 import Nav from '../components/nav';
 import ProductList from '../components/productList';
 import Dashboard from './dashboard';
 import { useCart } from '../context/cartContext';
 const Cart = () => {
       
-      const {cartItems,IncreaseQuantity,cartCount,updated,DecreaseQuantity}=useCart();
+      const {cartItems,IncreaseQuantity,cartCount,DecreaseQuantity}=useCart();
       
    
   return (

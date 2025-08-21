@@ -1,12 +1,10 @@
-import React,{useState,useEffect}from 'react';
+import React from 'react';
 import Nav from '../components/nav';
-import ProductList from '../components/productList';
-import Dashboard from './dashboard';
 import bin from '../assets/bin.svg';
 import { useWishList } from '../context/wishlistContext';
 const WishList = () => {
       
-      const {WishItems,setWishItems,handleAddToWishList,handleRemoval,WishCount}=useWishList();
+      const {WishItems,handleRemoval,WishCount}=useWishList();
       
    
   return (
